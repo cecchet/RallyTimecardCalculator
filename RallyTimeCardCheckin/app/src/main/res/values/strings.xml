@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Frog Racing - Rally Time Card Checkin Calculator</string>
+    <string name="s_1_10">S.1/10</string>
+    <string name="bogey">Bogey</string>
+    <string name="min">Min</string>
+    <string name="actual_start">Actual start</string>
+    <string name="finish">Finish</string>
+    <string name="transit">Transit</string>
+    <string name="calculate">Calculate</string>
+    <string name="textview">TextView</string>
+    <string name="actual_start_button">Actual Start</string>
+    <string name="start_time">Start time</string>
+    <string name="finish_time">Finish time</string>
+    <string name="bogey_min">Bogey min</string>
+    <string name="transit_min">Transit min</string>
+    <string name="press_calculate_after_entering_values_for_all_fields">Select Actual Start time (not Ideal Start)</string>
+    <string name="m">M</string>
+    <string name="h">H</string>
+    <string name="stage_time">Stage Time</string>
+    <string name="s">S</string>
+    <string name="start_transit">Start transit</string>
+    <string name="atc_in">ATC IN</string>
+    <string name="_0_0">0.0</string>
+    <string name="rally_time">Rally Time</string>
+    <string name="current_time">Current Time</string>
+    <string name="time_to_atc">Time to ATC</string>
+    <string name="no_time">No time</string>
+</resources>
