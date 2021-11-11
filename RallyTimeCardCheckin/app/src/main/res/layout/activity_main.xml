@@ -7,19 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/stageTimeM"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_126sdp"
-        android:background="@drawable/dark_box"
-        android:gravity="center"
-        android:text="@string/m"
-        android:textSize="@dimen/_24sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <!--
+ <!--
         <Button
             android:id="@+id/calculate"
             android:layout_width="@dimen/_101sdp"
@@ -31,314 +19,327 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     -->
-    <Button
-        android:id="@+id/transitButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_430sdp"
-        android:layout_marginTop="@dimen/_4sdp"
-        app:backgroundTint="@android:color/holo_green_dark"
-        android:onClick="pickTransit"
-        android:text="@string/transit"
-        android:textSize="@dimen/_20sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <Button
+     android:id="@+id/transitButton"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_390sdp"
+     android:layout_marginTop="@dimen/_4sdp"
+     android:onClick="pickTransit"
+     android:text="@string/transit"
+     android:textSize="@dimen/_20sdp"
+     app:backgroundTint="@android:color/holo_green_dark"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/currentTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_420sdp"
-        android:layout_marginTop="@dimen/_185sdp"
-        android:text="@string/current_time"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="@dimen/_22sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/transitM"
+     android:layout_width="@dimen/_68sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_404sdp"
+     android:layout_marginTop="@dimen/_52sdp"
+     android:background="@drawable/box"
+     android:gravity="center"
+     android:text="@string/min"
+     android:textSize="@dimen/_26sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextClock
-        android:id="@+id/clock"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_420sdp"
-        android:layout_marginTop="@dimen/_205sdp"
-        android:format12Hour="kk:mm:ss"
-        android:format24Hour="hh:mm:ss"
-        android:text="@string/rally_time"
-        android:textSize="@dimen/_32sdp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/currentTime"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_360sdp"
+     android:layout_marginTop="@dimen/_180sdp"
+     android:text="@string/current_time"
+     android:textAppearance="@style/TextAppearance.AppCompat.Large"
+     android:textSize="@dimen/_22sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/timeToAtc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_420sdp"
-        android:layout_marginTop="@dimen/_90sdp"
-        android:text="@string/time_to_atc"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="@dimen/_24sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextClock
+     android:id="@+id/clock"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_360sdp"
+     android:layout_marginTop="@dimen/_200sdp"
+     android:format12Hour="kk:mm:ss"
+     android:format24Hour="hh:mm:ss"
+     android:text="@string/rally_time"
+     android:textSize="@dimen/_32sdp"
+     android:textStyle="bold"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/checkinClock"
-        android:layout_width="@dimen/_140sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_415sdp"
-        android:layout_marginTop="@dimen/_112sdp"
-        android:gravity="center"
-        android:text="@string/no_time"
-        android:textSize="@dimen/_32sdp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/timeToAtc"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_365sdp"
+     android:layout_marginTop="@dimen/_90sdp"
+     android:text="@string/time_to_atc"
+     android:textAppearance="@style/TextAppearance.AppCompat.Large"
+     android:textSize="@dimen/_22sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/atcIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_310sdp"
-        android:layout_marginTop="@dimen/_90sdp"
-        android:text="@string/atc_in"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="@dimen/_26sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/checkinClock"
+     android:layout_width="@dimen/_140sdp"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_355sdp"
+     android:layout_marginTop="@dimen/_112sdp"
+     android:gravity="center"
+     android:text="@string/no_time"
+     android:textSize="@dimen/_30sdp"
+     android:textStyle="bold"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/atcInH"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_300sdp"
-        android:layout_marginTop="@dimen/_126sdp"
-        android:background="@drawable/dark_box"
-        android:gravity="center"
-        android:text="@string/h"
-        android:textSize="@dimen/_26sdp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/atcIn"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_265sdp"
+     android:layout_marginTop="@dimen/_90sdp"
+     android:text="@string/atc_in"
+     android:textAppearance="@style/TextAppearance.AppCompat.Large"
+     android:textSize="@dimen/_26sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/atcInM"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_350sdp"
-        android:layout_marginTop="@dimen/_126sdp"
-        android:background="@drawable/dark_box"
-        android:gravity="center"
-        android:text="@string/m"
-        android:textSize="@dimen/_26sdp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/atcInH"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_255sdp"
+     android:layout_marginTop="@dimen/_120sdp"
+     android:background="@drawable/dark_box"
+     android:gravity="center"
+     android:text="@string/h"
+     android:textSize="@dimen/_26sdp"
+     android:textStyle="bold"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/resultDisplay"
-        android:layout_width="@dimen/_390sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_170sdp"
-        android:text="@string/press_calculate_after_entering_values_for_all_fields"
-        android:textSize="@dimen/_14sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/atcInM"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_305sdp"
+     android:layout_marginTop="@dimen/_120sdp"
+     android:background="@drawable/dark_box"
+     android:gravity="center"
+     android:text="@string/m"
+     android:textSize="@dimen/_26sdp"
+     android:textStyle="bold"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_4sdp"
-        android:layout_marginTop="@dimen/_4sdp"
-        app:backgroundTint="@android:color/holo_green_dark"
-        android:onClick="showStartTimePickerDialog"
-        android:text="@string/actual_start_button"
-        android:textSize="@dimen/_19sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/resultDisplay"
+     android:layout_width="@dimen/_350sdp"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_10sdp"
+     android:layout_marginTop="@dimen/_170sdp"
+     android:text="@string/xxhdpi"
+     android:textSize="@dimen/_14sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/actualStartM"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_76sdp"
-        android:layout_marginTop="@dimen/_52sdp"
-        android:background="@drawable/box"
-        android:gravity="center"
-        android:text="@string/m"
-        android:textSize="@dimen/_24sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <Button
+     android:id="@+id/startButton"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_4sdp"
+     android:layout_marginTop="@dimen/_4sdp"
+     android:onClick="showStartTimePickerDialog"
+     android:text="@string/actual_start_button"
+     android:textSize="@dimen/_20sdp"
+     app:backgroundTint="@android:color/holo_green_dark"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/finishM"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_205sdp"
-        android:layout_marginTop="@dimen/_52sdp"
-        android:background="@drawable/box"
-        android:gravity="center"
-        android:text="@string/m"
-        android:textSize="@dimen/_26sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/actualStartH"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_15sdp"
+     android:layout_marginTop="@dimen/_52sdp"
+     android:background="@drawable/box"
+     android:gravity="center"
+     android:text="@string/h"
+     android:textSize="@dimen/_26sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/finishH"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_155sdp"
-        android:layout_marginTop="@dimen/_52sdp"
-        android:background="@drawable/box"
-        android:gravity="center"
-        android:text="@string/h"
-        android:textSize="@dimen/_24sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/actualStartM"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_65sdp"
+     android:layout_marginTop="@dimen/_52sdp"
+     android:background="@drawable/box"
+     android:gravity="center"
+     android:text="@string/m"
+     android:textSize="@dimen/_24sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/finishButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_190sdp"
-        android:layout_marginTop="@dimen/_4sdp"
-        android:onClick="showFinishTimePickerDialog"
-        android:text="@string/finish"
-        android:textSize="@dimen/_20sdp"
-        app:backgroundTint="@android:color/holo_green_dark"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <EditText
+     android:id="@+id/finishS"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_235sdp"
+     android:layout_marginTop="@dimen/_52sdp"
+     android:background="@drawable/box"
+     android:gravity="center"
+     android:inputType="numberDecimal"
+     android:text="@string/_0_0"
+     android:textSize="@dimen/_26sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent"
+     tools:ignore="DuplicateSpeakableTextCheck" />
 
-    <TextView
-        android:id="@+id/actualStartH"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_28sdp"
-        android:layout_marginTop="@dimen/_52sdp"
-        android:background="@drawable/box"
-        android:gravity="center"
-        android:text="@string/h"
-        android:textSize="@dimen/_26sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/finishM"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_185sdp"
+     android:layout_marginTop="@dimen/_52sdp"
+     android:background="@drawable/box"
+     android:gravity="center"
+     android:text="@string/m"
+     android:textSize="@dimen/_26sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/stageTimeS"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_74sdp"
-        android:layout_marginTop="@dimen/_126sdp"
-        android:background="@drawable/dark_box"
-        android:gravity="center"
-        android:text="@string/s"
-        android:textSize="@dimen/_24sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/finishH"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_135sdp"
+     android:layout_marginTop="@dimen/_52sdp"
+     android:background="@drawable/box"
+     android:gravity="center"
+     android:text="@string/h"
+     android:textSize="@dimen/_24sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/bogeyButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_325sdp"
-        android:layout_marginTop="@dimen/_4sdp"
-        app:backgroundTint="@android:color/holo_green_dark"
-        android:onClick="pickBogey"
-        android:text="@string/bogey"
-        android:textSize="@dimen/_20sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <Button
+     android:id="@+id/finishButton"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_170sdp"
+     android:layout_marginTop="@dimen/_4sdp"
+     android:onClick="showFinishTimePickerDialog"
+     android:text="@string/finish"
+     android:textSize="@dimen/_20sdp"
+     app:backgroundTint="@android:color/holo_green_dark"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/bogeyM"
-        android:layout_width="@dimen/_68sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_332sdp"
-        android:layout_marginTop="@dimen/_52sdp"
-        android:background="@drawable/box"
-        android:gravity="center"
-        android:text="@string/min"
-        android:textSize="@dimen/_26sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <Button
+     android:id="@+id/bogeyButton"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_300sdp"
+     android:layout_marginTop="@dimen/_4sdp"
+     android:onClick="pickBogey"
+     android:text="@string/bogey"
+     android:textSize="@dimen/_20sdp"
+     app:backgroundTint="@android:color/holo_green_dark"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/finishS"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_255sdp"
-        android:layout_marginTop="@dimen/_52sdp"
-        android:background="@drawable/box"
-        android:gravity="center"
-        android:inputType="numberDecimal"
-        android:text="@string/_0_0"
-        android:textSize="@dimen/_26sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateSpeakableTextCheck" />
+ <TextView
+     android:id="@+id/bogeyM"
+     android:layout_width="@dimen/_68sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_305sdp"
+     android:layout_marginTop="@dimen/_52sdp"
+     android:background="@drawable/box"
+     android:gravity="center"
+     android:text="@string/min"
+     android:textSize="@dimen/_26sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/transitM"
-        android:layout_width="@dimen/_68sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_444sdp"
-        android:layout_marginTop="@dimen/_52sdp"
-        android:background="@drawable/box"
-        android:gravity="center"
-        android:text="@string/min"
-        android:textSize="@dimen/_26sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/stageTime"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_6sdp"
+     android:layout_marginTop="@dimen/_90sdp"
+     android:text="@string/stage_time"
+     android:textAppearance="@style/TextAppearance.AppCompat.Large"
+     android:textSize="@dimen/_22sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/stageTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginTop="@dimen/_90sdp"
-        android:text="@string/stage_time"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="@dimen/_24sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/stageTimeM"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_12sdp"
+     android:layout_marginTop="@dimen/_120sdp"
+     android:background="@drawable/dark_box"
+     android:gravity="center"
+     android:text="@string/m"
+     android:textSize="@dimen/_24sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/startTransit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_150sdp"
-        android:layout_marginTop="@dimen/_90sdp"
-        android:text="@string/start_transit"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="@dimen/_24sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/stageTimeS"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_62sdp"
+     android:layout_marginTop="@dimen/_120sdp"
+     android:background="@drawable/dark_box"
+     android:gravity="center"
+     android:text="@string/s"
+     android:textSize="@dimen/_24sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/startTransitM"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_212sdp"
-        android:layout_marginTop="@dimen/_126sdp"
-        android:background="@drawable/dark_box"
-        android:gravity="center"
-        android:text="@string/m"
-        android:textSize="@dimen/_24sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/startTransit"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginStart="@dimen/_125sdp"
+     android:layout_marginTop="@dimen/_90sdp"
+     android:text="@string/start_transit"
+     android:textAppearance="@style/TextAppearance.AppCompat.Large"
+     android:textSize="@dimen/_22sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/startTransitH"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_34sdp"
-        android:layout_marginStart="@dimen/_162sdp"
-        android:layout_marginTop="@dimen/_126sdp"
-        android:background="@drawable/dark_box"
-        android:gravity="center"
-        android:text="@string/h"
-        android:textSize="@dimen/_24sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+ <TextView
+     android:id="@+id/startTransitM"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_185sdp"
+     android:layout_marginTop="@dimen/_120sdp"
+     android:background="@drawable/dark_box"
+     android:gravity="center"
+     android:text="@string/m"
+     android:textSize="@dimen/_24sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
+
+ <TextView
+     android:id="@+id/startTransitH"
+     android:layout_width="@dimen/_50sdp"
+     android:layout_height="@dimen/_34sdp"
+     android:layout_marginStart="@dimen/_135sdp"
+     android:layout_marginTop="@dimen/_120sdp"
+     android:background="@drawable/dark_box"
+     android:gravity="center"
+     android:text="@string/h"
+     android:textSize="@dimen/_24sdp"
+     app:layout_constraintStart_toStartOf="parent"
+     app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

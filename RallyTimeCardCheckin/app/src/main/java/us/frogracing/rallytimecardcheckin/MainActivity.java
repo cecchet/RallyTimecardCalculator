@@ -10,6 +10,7 @@ import android.view.Window;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.TextClock;
 import android.widget.TextView;
@@ -27,6 +28,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        EditText vFinishS = findViewById(R.id.finishS);
+        vFinishS.addTextChangedListener(new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {
+                calculateTimes(findViewById(android.R.id.content));
+            }
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+        });
     }
 
     public void showStartTimePickerDialog(View v) {
@@ -210,10 +224,10 @@ public class MainActivity extends AppCompatActivity {
         }
         Date atcIn;
         if (stageMins < bogey) {
-            text += "ATC Checkin time: " + df.format(start.getTime()) + " + " + bogey + " (bogey) + " + transit + " (transit)<br/>";
+            text += "ATC Checkin: " + df.format(start.getTime()) + " + " + bogey + " (bogey) + " + transit + " (transit)<br/>";
             atcIn = new Date(start.getTime() + (bogey + transit) * 60 * 1000);
         } else {
-            text += "ATC Checkin time: " + df.format(start.getTime()) + " + " + stageMins + " (stage time) + " + transit + " (transit)<br/>";
+            text += "ATC Checkin: " + df.format(start.getTime()) + " + " + stageMins + " (stage time) + " + transit + " (transit)<br/>";
             atcIn = new Date(start.getTime() + (stageMins + transit) * 60 * 1000);
         }
 
@@ -228,7 +242,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         SimpleDateFormat ms = new SimpleDateFormat("mm:ss");
-        SimpleDateFormat cf = new SimpleDateFormat("hh:mm:ss");
+        SimpleDateFormat cf = new SimpleDateFormat("HH:mm:ss");
         currentTime.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -245,11 +259,11 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     long timeLeft = atcIn.getTime() - cf.parse(s.toString()).getTime();
                     if (timeLeft > 0) {
-                        atcCheckin.setText(Html.fromHtml("<font color='blue'>Wait " + ms.format(new Date(timeLeft)) + "</font>"));
+                        atcCheckin.setText(Html.fromHtml("<font color='blue'>Wait " + (timeLeft / 60000) + ":" + (timeLeft % 60000 / 1000) + "</font>"));
                     } else if (timeLeft >= -60000) {
                         atcCheckin.setText(Html.fromHtml("<font color='green'>NOW! " + (60 + timeLeft / 1000) + "s left</font>"));
                     } else {
-                        atcCheckin.setText(Html.fromHtml("<font color='red'>Late " + ms.format(new Date(-timeLeft)) + "</font>"));
+                        atcCheckin.setText(Html.fromHtml("<font color='red'>Late " + (-timeLeft / 60000) + ":" + (-timeLeft % 60000 / 1000) + "</font>"));
                     }
                 } catch (ParseException e) {
                     atcCheckin.setText("Error " + e);
